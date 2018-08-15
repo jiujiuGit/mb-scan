@@ -1,0 +1,80 @@
+/* pages/detail/detail.wxss */
+page{
+  background: url("https://image.mbgo.com/mc-ai.jpg?123") no-repeat;
+  background-size:100% 100%; 
+  height: 100%;
+    
+}
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28rpx;
+}
+.logo{
+  width: 520rpx;
+  height: 100rpx;
+}
+.flex{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.title{
+  
+  color:#636363;
+  margin-top: 30rpx;
+  
+  font-size: 60rpx;
+}
+.tm{
+  width: 242rpx;
+  height: 258rpx;
+  margin-top: 40rpx;
+  background: url("https://image.mbgo.com/mac-mo.png") no-repeat;
+  background-size:100% 100%; 
+}
+.tm.none{
+  width: 396rpx;
+  height: 396rpx;
+  margin-top: 40rpx;
+  background: url("https://image.mbgo.com/mac-ta.png") no-repeat;
+  background-size:100% 100%; 
+   white-space: nowrap 
+}
+.price{
+  color:#f56c12;
+  
+  font-size: 120rpx;
+  margin-top: 10rpx;
+
+  background-size:100% 100%; 
+   white-space: nowrap 
+}
+.price{
+  color:#f56c12;
+  
+  font-size: 120rpx;
+  margin-top: 10rpx;
+}
+.tm.none .price{
+  font-size: 80rpx;
+}
+.btn{
+  margin-top: 100rpx;
+  background: #ffffff;
+  width: 300rpx;
+  
+  text-align: center;
+  padding: 20rpx;
+  border-radius: 60rpx;
+  border:1px solid #bbbbbb;
+  color:#636363;
+  letter-spacing: 4rpx;
+  font-size: 32rpx;
+}
+.name{
+ margin-top: 50rpx;
+ color:#636363;
+ font-size: 32rpx;
+}

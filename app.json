@@ -1,0 +1,48 @@
+{
+  "pages": [
+    "pages/goodsDetail/goodsDetail",
+    "pages/index/index",
+    "pages/user/user",
+    "pages/outCode/outCode",
+    "pages/couponList/couponList",
+    "pages/authorization/authorization",
+    "pages/detail/detail"
+    
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#f9db63",
+    "navigationBarTitleText": "扫码购",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#eeeeee"
+  },
+  "tabBar": {
+    "selectedColor": "#f9db63",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/home.png",
+        "selectedIconPath": "images/home-selected.png"
+      },
+      {
+        "pagePath": "pages/couponList/couponList",
+        "text": "去领券",
+        "iconPath": "images/yhq.png",
+        "selectedIconPath": "images/yhq-selected.png"
+      },
+      {
+        "pagePath": "pages/outCode/outCode",
+        "text": "出场码",
+        "iconPath": "images/code.png",
+        "selectedIconPath": "images/code-selected.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "我的",
+        "iconPath": "images/mine.png",
+        "selectedIconPath": "images/mine-selected.png"
+      }
+    ]
+  }
+}

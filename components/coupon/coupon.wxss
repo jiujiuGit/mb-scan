@@ -1,0 +1,67 @@
+/* pages/coupon/coupon.wxss */
+/* @import '../../static/css/common.wxss'; */
+@import "../../static/css/common.wxss"; 
+.coupon-item{
+  margin-top: 28rpx;
+  display: flex;
+}
+.coupon-left{
+  background-color: #FADA63;
+  width: 198rpx;
+  text-align: center;
+  height: 136rpx;
+}
+.coupon-m{
+  font-size: 60rpx;
+}
+.yuan{
+  font-size: 30rpx;
+}
+.coupon-rule{
+  font-size: 30rpx;
+}
+.coupon-right{
+  background-color: #F5F5F5;
+  font-size: 22rpx;
+  color: #353535;
+  padding: 22rpx 0;
+  display: flex;
+  flex-grow: 1;
+
+}
+.des{
+  padding-left: 20rpx;
+  width: 310rpx;
+  position: relative
+}
+.time{
+  position: absolute;
+  top: 0;
+}
+.position{
+  position: absolute;
+  bottom: 0;
+}
+.state{
+  text-align: center;
+  width: 162rpx;
+  align-items:center;
+  justify-content: center;
+}
+.btn{
+  width: 114rpx;
+  height: 46rpx;
+  line-height: 46rpx;
+  color: #ffffff;
+  font-size: 22rpx;
+  text-align: center;
+  background-color: #353535;
+  border-radius: 6rpx;
+}
+.state-img{
+  width: 88rpx;
+  height: 88rpx;
+}
+.img{
+  font-size: 0;
+}

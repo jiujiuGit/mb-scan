@@ -1,0 +1,9 @@
+/**app.wxss**/
+@import './static/css/common.wxss';
+@import './static/css/iconfont.wxss';
+.container {
+  height: 100%;
+  width: 100%;
+
+  box-sizing: border-box;
+} 

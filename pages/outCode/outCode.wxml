@@ -1,0 +1,40 @@
+<!--pages/outCode/outCode.wxml-->
+<view>
+<!-- 只有一个待出场码 -->
+  <view id='unique' wx:if="{{0}}">
+    <view id='black'>请向工作人员出示此二维码</view>
+    <view id='red'>以解除防盗扣</view>
+    <view><image id='erweima' src='../../images/erweima.png' mode='widthFix'></image></view>
+    <view id='orderDetail'>订单详情</view>
+  </view>
+
+  <!-- 多个待出场码 -->
+  <view id='list'>
+    <view class='lists-item' wx:for="{{4}}">
+      <view class='flex-box section1'>
+        <view>
+          <view>零售小票：92982882</view>
+          <view>美特斯邦威旗舰店</view>
+        </view>
+        <view>
+        <view class='state'>待出场</view>
+        <view class='time'>2018-09-01 12:09:21</view>
+        </view>
+      </view>
+      <view class='flex-box section2'>
+
+        <view class='flex-item-1 img-container' >
+          <view class='flex-box scroll'>
+            <view wx:for='{{5}}'><image  class='prod-img' mode='widthFix' src='../../images/img.jpg'></image></view>
+          </view>
+        </view>
+        <view><image  class='erweima-icon' mode='widthFix' src='../../images/code.png'></image></view>
+      </view>
+      <view class='section3'>
+        <view><text>共2件商品</text> <text class='real-pay'>实付：￥212.00</text></view>
+      </view>
+    </view>
+
+    
+  </view>
+</view>

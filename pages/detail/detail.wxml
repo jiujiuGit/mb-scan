@@ -1,0 +1,25 @@
+<!--pages/detail/detail.wxml-->
+<view class='container'>
+  <view class=''>
+    <view class='flex'>
+      <image src='/images/logo1.png' class='logo'></image>
+    </view>
+    <view class='flex'>
+       <view class='title flex' wx:if="{{price && name}}">实付价</view>
+    </view>
+    <view class='flex'>
+      <view class='flex tm {{none}}' >
+       
+        <view class='price flex'>{{price}}</view>
+      </view>
+    </view>
+    
+    
+    
+    <view class='name flex' wx:if="{{price && name}}">{{name}}</view>
+    <view class='flex'>
+    <view  class='btn' bindtap='scan'>继续扫描</view>
+    </view>
+    
+  </view>
+</view>

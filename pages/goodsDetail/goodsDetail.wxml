@@ -1,0 +1,103 @@
+<!--pages/goodsDetail/goodsDetail.wxml-->
+<view>
+  <view id='container'>
+    <section id='first-screen'>
+      <view id='swiper-container' style='height:640rpx'>
+        <swiper indicator-dots="{{indicatorDots}}"
+          autoplay="{{autoplay}}" 
+          interval="{{interval}}" 
+          duration="{{duration}}" 
+          style='height:640rpx'
+          bindchange = 'swiperChange'
+          >
+          <block wx:for="{{imgUrls}}">
+            <swiper-item>
+              <image src="{{item}}" class="slide-image" mode='aspectFit'/>
+            </swiper-item>
+          </block>
+        </swiper>
+        <view id='indicator'>{{currentIndicator}}/{{imgUrls.length}}</view>
+      </view>
+      <view class='section-item' id='section1'>
+        <view id='goods-name'>ME＆CITY 女式棉质大摆裙</view>
+        <view class='flex-box goods-msg'>
+          <view>
+            <view id='salesPrice'>￥199.00 <text id='tagPrice'>￥200.00</text></view>
+            <view class='flex-box'>
+              <view class='box'>亚麻</view>
+              <view class='box'>色码齐全</view>
+            </view>
+          </view>
+          <view>
+            <view id='goodsAttr'><text >蓝色</text><text id='size'>S：160/64A</text></view>
+            <view class='inventory'>库存充裕</view>
+          </view>
+        </view>
+      </view>
+      <view class='section-item flex-box' id='section2'>
+        <text class='promotion-text flex-shrink-0'>促销</text>
+        <view class='flex-box promotion-list'>
+          <view class='promotion-item' wx:for='{{2}}'>
+            <text class='tag'>满减</text> 
+            <text class='description'>满300立减50</text>
+          </view>
+        </view>
+      </view>
+      <view class='section-item flex-box' id='section3'>
+        <text class='promotion-text flex-shrink-0' >领券</text>
+        <view class='flex-box flex-item-1  own-coupon-list' >
+          <view  class='own-coupon-item flex-shrink-0' wx:for="{{2}}">满300减80</view>
+        </view>
+        <view class='iconfont icon-you' bindtap='pickCoupon'></view>
+      </view>
+
+      <view class='section-item flex-box' id='section4'>
+        <text class='promotion-text flex-item-1 flex-shrink-0' >其他库存</text>
+        <view class='iconfont icon-you' bindtap='showModal'></view>
+      </view>
+    </section>
+
+    <section id='detail'>
+      <view id='detail-division' class='fc'>图文详情</view>
+      <view id='detial-text'>
+        <text class='fc spxx'>商品信息</text>
+        <view class='detial-text-item'>品牌：metersbonwe</view>
+        <view class='detial-text-item'>款名：</view>
+        <view class='detial-text-item'>款号：</view>
+        <view class='detial-text-item'>分类：</view>
+        <view class='detial-text-item'>吊牌价：</view>
+        <view class='detial-text-item'>系列：</view>
+        <view class='detial-text-item'>季节：</view>
+        <view class='detial-text-item'>性别：</view>
+        
+      </view>
+      <view id='detail-images'>
+        <view wx:for='{{5}}'><image src='http://pic.banggo.com/sources/images/goods/MC/559627/559627_00.jpg?x-oss-process=image/resize,m_pad,w_500,h_500' mode='widthFix'></image></view>
+      </view>
+    </section>
+  
+    <view class='flex-box footer'>
+      <view id='share'><view class='iconfont icon-fenxiang'></view><view class='btn-text'>分享</view></view>
+      <view class='border-right'></view>
+      <view id='shoppingBag'>
+        <view class='iconfont icon-gouwudai'></view><view  class='btn-text'>购物袋</view>
+        <view class='bag-qty'>2</view>
+      </view>
+      <view><view class='btn' size='middle'>继续扫描</view></view>
+      <view><view class='btn' size='middle'>加入购物袋</view></view>
+    </view>
+  </view>
+
+  <!--屏幕背景变暗的背景  -->
+  <view class="layer" bindtap="hideModal" wx:if="{{showModalStatus}}" catchtouchmove="preventTouchMove"></view>
+  <!--弹出框  -->
+  <view animation="{{animationData}}" class="layer-bottoms-box" wx:if="{{showModalStatus}}" catchtouchmove="preventTouchMove">
+    <view id='layer-content'>
+      <view class='iconfont icon-cha' bindtap="hideModal"></view>
+      <view class='layer-title'>优惠券</view>
+      <view class='coupon-list'>
+        <coupon-component wx:for='{{4}}'></coupon-component>  
+      </view>
+    </view>
+  </view>
+</view>

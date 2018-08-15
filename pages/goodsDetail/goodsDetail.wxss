@@ -1,0 +1,228 @@
+/* pages/goodsDetail/goodsDetail.wxss */
+
+#swiper-container{
+  position: relative
+}
+#indicator{
+  position: absolute;
+  width: 64rpx;
+  height: 34rpx;
+  background-color:rgba(53,53,53,0.7);
+  font-size: 22rpx;
+  color: white;
+  right: 96rpx;
+  bottom: 12rpx;
+  border-radius: 4rpx;
+  text-align: center;
+}
+.slide-image{
+  width: 100%;
+  height: 640rpx;
+
+}
+.goods-name{
+  font-size: 30rpx;
+  font-weight: 600;
+  color: black;
+}
+.section-item{
+  padding: 22rpx;
+  border-bottom: 10rpx solid #F5F5F5;
+  align-items: center;
+}
+.section1{
+  align-items:center
+}
+.goods-msg{
+  justify-content: space-between;
+}
+#salesPrice{
+  color: #ff0000;
+  flex-shrink: 40rpx;
+  margin-right: 22rpx;
+  margin: 22rpx 0;
+}
+#tagPrice{
+  color: #9a9a9a;
+  font-size: 22rpx;
+  text-decoration: line-through;
+}
+.box{
+  color: #f39800;
+  margin-right: 12rpx;
+  border:1px solid #f39800;
+  padding: 0 22rpx;
+  border-radius: 4rpx;
+  height: 38rpx;
+  line-height: 38rpx;
+  font-size: 24rpx;
+}
+#goodsAttr{
+  margin: 22rpx 0;
+  text-align: right;
+}
+#size{
+  margin-left: 22rpx;
+}
+.icon-you{
+  padding-left: 40rpx;
+}
+.inventory{
+  padding: 0 22rpx;
+  font-size: 24rpx;
+  border-radius: 4rpx;
+  height: 38rpx;
+  line-height: 38rpx;
+  width: 100rpx;
+  color: white;
+  background-color: #009944;
+  float: right;
+}
+#section-item{
+  align-items: center;
+}
+.promotion-item{
+  margin-left: 40rpx;
+}
+.promotion-list{
+  flex-wrap: wrap;
+}
+.promotion-text{
+  color: #353535;
+  font-size: 28rpx;
+  vertical-align: middle;
+}
+.tag{
+  font-size: 24rpx;
+  color: white;
+  height: 38rpx;
+  line-height: 38rpx;
+  background-color: #f39800;
+  border-radius: 4rpx;
+  padding:  0 20rpx;
+  vertical-align: middle;
+}
+.description{
+  color: #353535;
+  font-size: 28rpx;
+  margin-left: 12rpx;
+}
+.own-coupon-list{
+  flex-wrap: wrap;
+}
+.own-coupon-item{
+  color: white;
+  background-color: #dd0000;
+  font-size: 24rpx;
+  margin-left: 26rpx;
+  height: 38rpx;
+  line-height: 38rpx;
+  vertical-align: middle;
+  padding: 0 22rpx;
+}
+.own-coupon-item{
+  margin: 10rpx 0 10rpx 40rpx;
+}
+#section4{
+  border-bottom: none;
+}
+#detail-division{
+  background-color: #e5e5e5;
+  height: 62rpx;
+  line-height: 62rpx;
+  text-align: center;
+  font-size: 28rpx;
+}
+#detial-text{
+  margin: 22rpx;
+}
+.spxx{
+  font-size: 28rpx;
+}
+.detial-text-item{
+  color: #9a9a9a;
+  font-size: 24rpx;
+  padding: 5rpx 0;
+}
+#detail-images>view{
+  font-size: 0;
+}
+#detail-images>view>image{
+  width: 100%;
+}
+.footer{
+  border-top:1px solid #acacac;
+  align-items: center;
+  justify-content: space-around;
+  /* padding: 0 22rpx */
+}
+.icon-fenxiang,.icon-gouwudai{
+  color: #8A8A8A;
+  text-align: center;
+  margin-bottom: 10rpx;
+  font-size: 28rpx;
+}
+.border-right{
+  width: 2rpx;
+  height: 60rpx;
+  background-color: #acacac;
+}
+#share{
+  /* padding: 0 30rpx; */
+  width: 90rpx;
+}
+#shoppingBag{
+  position: relative;
+  /* padding: 0 30rpx; */
+  width: 90rpx;
+}
+.bag-qty{
+  position: absolute;
+  top: -4rpx;
+  right: 0;
+  width: 28rpx;
+  height: 28rpx;
+  border-radius: 50%;
+  line-height: 28rpx;
+  background-color: #dd0000;
+  text-align: center;
+  color: white;
+  font-size: 22rpx;
+
+}
+.btn-text{
+  font-size: 22rpx;
+  color: #353535;
+  text-align: center;
+}
+.btn{
+  height: 72rpx;
+  line-height: 72rpx;
+  /* margin-left: 20rpx; */
+  background-color: #FADA63;
+  font-size: 28rpx;
+  color: #353535;
+  border: none;
+  width: 234rpx;
+  text-align: center;
+  border-radius: 8rpx;
+
+}
+
+#layer-content{
+  padding: 30rpx 40rpx;
+  background-color: #f5f5f5;
+  position: relative;
+}
+.icon-cha{
+  position: absolute;
+  right: 30rpx;
+  top: 30rpx;
+}
+.layer-title{
+  color: #353535;
+  font-size: 30rpx;
+  text-align: center;
+  font-weight: bolder;
+  /* margin-top: 30rpx; */
+}

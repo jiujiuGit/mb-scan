@@ -1,0 +1,19 @@
+<!--components/coupon.wxml-->
+
+<view class='coupon-item flex-box'>
+  <view class='coupon-left'>
+    <view class='coupon-m'> <text class='yuan'>￥</text> <text>50</text></view>
+    <view class='coupon-rule'>满300可用</view>
+  </view>
+  <view class='coupon-right flex-item-1 flex-box'>
+    <view class='des'>
+      <view class='time'>2018.02.20-2018.09.10</view>
+      <view class='position'>仅美特斯邦威南京东路门店使用</view>
+    </view>
+    <view class='state'>
+      <view><image  class='state-img' mode='widthFix' src='../../images/lingqu.png'></image></view>
+    </view>
+  </view>
+</view>
+
+

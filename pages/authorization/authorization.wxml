@@ -1,0 +1,12 @@
+<!--pages/authorization/authorization.wxml-->
+
+<view class="section">
+  <input placeholder="手机号" auto-focus/>
+  <button wx:if="{{1}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">微信授权一键登录</button>
+  <button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">获取手机号</button>
+</view>
+<view>
+  <input placeholder='验证码'></input>
+</view>
+
+

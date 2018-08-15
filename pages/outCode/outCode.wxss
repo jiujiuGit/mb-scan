@@ -1,0 +1,82 @@
+/* pages/outCode/outCode.wxss */
+#unique{
+  position: absolute;   
+  top: 50%;   
+  left: 50%;   
+
+  -moz-transform: translate(-50%, -50%);  
+  -ms-transform: translate(-50%, -50%);   
+  -webkit-transform: translate(-50%, -50%);   
+  transform: translate(-50%, -50%);
+}
+#erweima{
+  width: 380rpx;
+  height: 380rpx;
+}
+#unique{
+  font-size: 24rpx;
+  text-align: center;
+}
+#red{
+  color: #ff0000;
+  margin-bottom: 50rpx;
+  margin-top: 10rpx;
+}
+#orderDetail{
+  color: #353535;
+  text-decoration: underline;
+  font-size: 24rpx;
+  margin-top: 30rpx;
+}
+/* 列表 */
+.lists-item{
+  border-bottom: 10rpx solid #f5f5f5;
+}
+.section1{
+  margin: 0 22rpx;
+  padding: 16rpx 0;
+  font-size: 24rpx;
+  border-bottom: 1px solid #f5f5f5;
+  justify-content: space-between;
+  line-height: 40rpx;
+  color: #353535;
+}
+.state{
+  color: #ff0000;
+  text-align: right;
+}
+.time{
+  color: #9a9a9a;
+  text-align: right;
+}
+.section2{
+  padding: 20rpx 22rpx;
+  border-bottom: 1px solid #f5f5f5;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.img-container{
+  max-width: 634rpx;
+  overflow-x: scroll;
+  flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+}
+.prod-img{
+  width: 116rpx;
+  height: 128rpx;
+  margin-right: 22rpx;
+}
+.erweima-icon{
+  width: 50rpx;
+  height: 50rpx;
+  margin-left: 22rpx;
+  text-align: right;
+}
+.section3{
+  color: #353535;
+  font-size: 24rpx;
+  padding: 22rpx;
+}
+.real-pay{
+  margin-left: 22rpx;
+}
