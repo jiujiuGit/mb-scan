@@ -28,7 +28,7 @@
       </view>
       <view class='state flex-box'>
         
-        <view class='btn' >点击领取</view>
+        <view class='coupon-btn' >点击领取</view>
       </view>
     </view>
   </view>

@@ -22,7 +22,7 @@
         <view id='goods-name'>ME＆CITY 女式棉质大摆裙</view>
         <view class='flex-box goods-msg'>
           <view>
-            <view id='salesPrice'>￥199.00 <text id='tagPrice'>￥200.00</text></view>
+            <view class='salesPrice'>￥199.00 <text id='tagPrice'>￥200.00</text></view>
             <view class='flex-box'>
               <view class='box'>亚麻</view>
               <view class='box'>色码齐全</view>
@@ -53,7 +53,7 @@
 
       <view class='section-item flex-box' id='section4'>
         <text class='promotion-text flex-item-1 flex-shrink-0' >其他库存</text>
-        <view class='iconfont icon-you' bindtap='showModal'></view>
+        <view class='iconfont icon-you' bindtap='showModal' bindtap='pickStock'></view>
       </view>
     </section>
 
@@ -94,10 +94,76 @@
   <view animation="{{animationData}}" class="layer-bottoms-box" wx:if="{{showModalStatus}}" catchtouchmove="preventTouchMove">
     <view id='layer-content'>
       <view class='iconfont icon-cha' bindtap="hideModal"></view>
-      <view class='layer-title'>优惠券</view>
-      <view class='coupon-list'>
-        <coupon-component wx:for='{{4}}'></coupon-component>  
-      </view>
+      <block wx:if='{{bottomList == "coupon"}}'>
+        <view class='layer-title'>优惠券</view>
+        <view class='coupon-list' >
+          <block>
+            <view class='coupon-item flex-box'>
+              <view class='coupon-left'>
+                <view class='coupon-m'> <text class='yuan'>￥</text> <text>50</text></view>
+                <view class='coupon-rule'>满300可用</view>
+              </view>
+              <view class='coupon-right flex-item-1 flex-box'>
+                <view class='des'>
+                  <view class='time'>2018.02.20-2018.09.10</view>
+                  <view class='position'>仅美特斯邦威南京东路门店使用</view>
+                </view>
+                <view class='state'>
+                  <view><image  class='state-img' mode='widthFix' src='../../images/lingqu.png'></image></view>
+                </view>
+              </view>
+            </view>  
+            <view class='coupon-item flex-box'>
+              <view class='coupon-left'>
+                <view class='coupon-m'> <text class='yuan'>￥</text> <text>50</text></view>
+                <view class='coupon-rule'>满300可用</view>
+              </view>
+              <view class='coupon-right flex-item-1 flex-box'>
+                <view class='des'>
+                  <view class='time'>2018.02.20-2018.09.10</view>
+                  <view class='position'>仅美特斯邦威南京东路门店使用</view>
+                </view>
+                <view class='state flex-box'>
+                  
+                  <view class='coupon-btn' >点击领取</view>
+                </view>
+              </view>
+            </view>
+          </block>
+          
+        </view>
+      </block>
+      <block wx:if='{{bottomList == "stock"}}'>
+        <view class='flex-box goods-stock-fir'>
+          <image class='curGoodsImg' src='../../images/s1.jpg' mode='widthFix'></image>
+          <view>
+            <view class='salesPrice'>￥199.00</view>
+            <view class='curGoodsAttr'>已选择：“160/64A” “蓝色”</view>
+          </view>
+
+          
+        </view>
+        <view class='goodsDetail-attr size-list'>
+            <view class='attr-list-title'>尺码</view>
+            <view class='flex-box flex-wrap attr-list'>
+              <block wx:for='{{5}}'>
+                <view class='attr-list-item {{curSize == index ? "attr-item-active":""}}' data-index='{{index}}' bindtap='sizeTap'>M:160/64A</view>
+              </block>
+            </view>
+            
+        </view>
+
+        <view class='goodsDetail-attr size-list'>
+            <view class='attr-list-title'>颜色</view>
+            <view class='flex-box flex-wrap attr-list'>
+              <block wx:for='{{5}}'>
+                <view class='attr-list-item {{curColor == index ? "attr-item-active":""}}' data-index='{{index}}' bindtap='colorTap'>宝石蓝 <text></text></view>
+              </block>
+            </view>
+            
+        </view>
+      </block>
+      
     </view>
   </view>
 </view>

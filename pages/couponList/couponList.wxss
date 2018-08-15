@@ -46,7 +46,7 @@
   align-items:center;
   justify-content: center;
 }
-.btn{
+.coupon-btn{
   width: 114rpx;
   height: 46rpx;
   line-height: 46rpx;

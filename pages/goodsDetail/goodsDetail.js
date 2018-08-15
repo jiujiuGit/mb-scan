@@ -14,7 +14,10 @@ Page({
     autoplay: false,
     interval: 5000,
     duration: 500,
-    currentIndicator:1
+    currentIndicator:1,
+    bottomList:'',
+    curSize:'',
+    curColor:''
   },
 
   /**
@@ -45,6 +48,15 @@ Page({
   
   },
   pickCoupon:function(){
+    this.setData({
+      bottomList:'coupon'
+    })
+    this.showModal();
+  },
+  pickStock:function(){
+    this.setData({
+      bottomList:'stock'
+    })
     this.showModal();
   },
   // 显示遮罩层
@@ -87,6 +99,17 @@ Page({
         showModalStatus: false
       })
     }.bind(this), 200)
+  },
+  sizeTap:function(e){
+    console.log(e)
+    this.setData({
+      curSize: e.currentTarget.dataset.index
+    })
+  },
+  colorTap:function(){
+    this.setData({
+      curColor: e.currentTarget.dataset.index
+    })
   },
   /**
    * 生命周期函数--监听页面卸载
