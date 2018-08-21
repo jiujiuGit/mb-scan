@@ -1,11 +1,21 @@
 {
   "pages": [
-    "pages/goodsDetail/goodsDetail",
     "pages/index/index",
-    "pages/user/user",
+    "pages/user/pages/index/index",
+    
+   
+   
+    
+    
+    "pages/authorization/authorization",
+    
+    
+    
+    "pages/goodsDetail/goodsDetail",
+    
     "pages/outCode/outCode",
     "pages/couponList/couponList",
-    "pages/authorization/authorization",
+    
     "pages/detail/detail"
     
   ],
@@ -38,11 +48,19 @@
         "selectedIconPath": "images/code-selected.png"
       },
       {
-        "pagePath": "pages/user/user",
+        "pagePath": "pages/user/pages/index/index",
         "text": "我的",
         "iconPath": "images/mine.png",
         "selectedIconPath": "images/mine-selected.png"
       }
     ]
-  }
+  },
+  "subPakages":[
+    {
+      "root":"pages/user",
+      "pages":[
+        "pages/index/index"
+      ]
+    }
+  ]
 }

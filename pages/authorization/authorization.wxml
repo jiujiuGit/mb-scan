@@ -1,12 +1,23 @@
 <!--pages/authorization/authorization.wxml-->
 
 <view class="section">
-  <input placeholder="手机号" auto-focus/>
-  <button wx:if="{{1}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">微信授权一键登录</button>
-  <button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">获取手机号</button>
+  <view class='fir flex-box'>
+    <view class='flex-box tel flex-item-1'>
+      <text>手机号：</text>
+      <input placeholder-class='placeholder' class='flex-item-1' placeholder="输入手机号" />
+    </view>
+    <button id='wxLogin' wx:if="{{1}}" type='text' open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo" wx:if="canIuse">微信授权一键登录</button>
+  </view>
+  <view class='verCode flex-box'>
+    <text class='flex-shrink-0'>验证码：</text>
+    <input class='flex-item-1' placeholder="输入验证码" placeholder-class='placeholder' />
+    <button id='sendCode'>发送验证码</button>
+  </view>
+  
+  <!-- <button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">获取手机号</button> -->
 </view>
 <view>
-  <input placeholder='验证码'></input>
+  <button class='login-btn'>登录</button>
 </view>
 
 

@@ -1,0 +1,57 @@
+<!--pages/user/pages/index/index.wxml-->
+<view id='userInfo'>
+  <view><image id='user-img' mode='widthFix' src='{{userInfo.avatarUrl}}'></image></view>
+  <view id='user-name'>{{userInfo.nickName}}</view>
+  <!-- <view><image id='user-img' mode='widthFix' src='{{userInfo.avatarUrl}}'></image></view>
+  <view id='user-name'>jiujiu</view> -->
+  <view class='flex-box user-dj'>
+    <view class='grade'> <text class='iconfont icon-huangguan'></text> 会员等级：V5</view>
+    <view class='jifen'> <text class='iconfont icon-jifen'></text> 积分：90</view>
+  </view>
+</view>
+<view class='flex-box order-bar'>
+  <navigator url='' class='flex-item-1'>
+    <view class=' order order-all'>
+      <view class='iconfont icon-quanbudingdan'></view>
+      <view>全部订单</view>
+    </view>
+  </navigator>
+  <navigator class='flex-item-1'> 
+    <view class='flex-item-1 order'>
+      <view class='iconfont icon-daifukuan'></view>
+      <view>待付款</view>
+    </view>
+  </navigator>
+  <navigator class='flex-item-1'>
+    <view class='flex-item-1 order'>
+      <view class='iconfont icon-chu'></view>
+      <view>待出场</view>
+    </view>
+  </navigator>
+  
+
+</view>
+
+
+<view class='cells'>
+  <navigator url="/page/navigate/navigate?title=navigate" hover-class="navigator-hover">
+    <view class='flex-box cell'>
+      <view class='flex-item-1'>我的优惠券</view>
+      <view class='cell-icon'><text class='iconfont icon-you'> </text></view>
+    </view>
+  </navigator>
+
+  <view class='flex-box cell scanSwitch'>
+      <view class='flex-item-1'>扫码查详情</view>
+      <view class='cell-icon'><switch color='#F49703' checked bindchange="scanSwitch"/></view>
+  </view>
+
+  <navigator url="/page/navigate/navigate?title=navigate" hover-class="navigator-hover">
+    <view class='flex-box cell'>
+      <view class='flex-item-1'>帮助中心</view>
+      <view class='cell-icon'><text class='iconfont icon-you'> </text></view>
+    </view>
+  </navigator>
+</view>
+
+

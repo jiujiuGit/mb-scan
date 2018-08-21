@@ -17,7 +17,8 @@ Page({
     currentIndicator:1,
     bottomList:'',
     curSize:'',
-    curColor:''
+    curColor:'',
+    couponList:[{},{},{}]
   },
 
   /**
@@ -62,7 +63,7 @@ Page({
   // 显示遮罩层
   showModal:function(){
     let animation = wx.createAnimation({
-      duration:100,
+      duration:400,
       timingFunction: "linear",
       delay: 0
     })
@@ -100,15 +101,38 @@ Page({
       })
     }.bind(this), 200)
   },
+  //领取优惠券
+  getCoupon:function(e){
+    console.log(e.currentTarget.dataset);
+    let couponList = this.data.couponList;
+    console.log(couponList[0])
+    let curCoupon = couponList[e.currentTarget.dataset.index]
+    console.log(curCoupon)
+    curCoupon['got'] = true
+    this.setData({
+      couponList: couponList
+    })
+
+  },
   sizeTap:function(e){
     console.log(e)
     this.setData({
       curSize: e.currentTarget.dataset.index
     })
   },
-  colorTap:function(){
+
+  colorTap:function(e){
     this.setData({
       curColor: e.currentTarget.dataset.index
+    })
+  },
+  // 继续扫描
+  scan:function(){
+    wx.scanCode({
+      onlyFromCamera: true,
+      success: (res) => {
+        console.log(res)
+      }
     })
   },
   /**

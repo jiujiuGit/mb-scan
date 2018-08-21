@@ -43,17 +43,17 @@
           </view>
         </view>
       </view>
-      <view class='section-item flex-box' id='section3'>
+      <view class='section-item flex-box npr' id='section3' bindtap='pickCoupon'>
         <text class='promotion-text flex-shrink-0' >领券</text>
         <view class='flex-box flex-item-1  own-coupon-list' >
           <view  class='own-coupon-item flex-shrink-0' wx:for="{{2}}">满300减80</view>
         </view>
-        <view class='iconfont icon-you' bindtap='pickCoupon'></view>
+        <view class='iconfont icon-you' ></view>
       </view>
 
-      <view class='section-item flex-box' id='section4'>
+      <view class='section-item flex-box npr' id='section4' bindtap='pickStock'>
         <text class='promotion-text flex-item-1 flex-shrink-0' >其他库存</text>
-        <view class='iconfont icon-you' bindtap='showModal' bindtap='pickStock'></view>
+        <view class='iconfont icon-you' bindtap='showModal' ></view>
       </view>
     </section>
 
@@ -83,7 +83,7 @@
         <view class='iconfont icon-gouwudai'></view><view  class='btn-text'>购物袋</view>
         <view class='bag-qty'>2</view>
       </view>
-      <view><view class='btn' size='middle'>继续扫描</view></view>
+      <view><view class='btn' size='middle' bindtap='scan'>继续扫描</view></view>
       <view><view class='btn' size='middle'>加入购物袋</view></view>
     </view>
   </view>
@@ -92,13 +92,13 @@
   <view class="layer" bindtap="hideModal" wx:if="{{showModalStatus}}" catchtouchmove="preventTouchMove"></view>
   <!--弹出框  -->
   <view animation="{{animationData}}" class="layer-bottoms-box" wx:if="{{showModalStatus}}" catchtouchmove="preventTouchMove">
-    <view id='layer-content'>
+    <view class='layer-content {{(bottomList == "coupon")?"couponLayer":"stockLayer"}}'>
       <view class='iconfont icon-cha' bindtap="hideModal"></view>
       <block wx:if='{{bottomList == "coupon"}}'>
         <view class='layer-title'>优惠券</view>
         <view class='coupon-list' >
           <block>
-            <view class='coupon-item flex-box'>
+            <!-- <view class='coupon-item flex-box'>
               <view class='coupon-left'>
                 <view class='coupon-m'> <text class='yuan'>￥</text> <text>50</text></view>
                 <view class='coupon-rule'>满300可用</view>
@@ -112,8 +112,8 @@
                   <view><image  class='state-img' mode='widthFix' src='../../images/lingqu.png'></image></view>
                 </view>
               </view>
-            </view>  
-            <view class='coupon-item flex-box'>
+            </view>   -->
+            <view class='coupon-item flex-box' wx:for='{{couponList}}'>
               <view class='coupon-left'>
                 <view class='coupon-m'> <text class='yuan'>￥</text> <text>50</text></view>
                 <view class='coupon-rule'>满300可用</view>
@@ -124,8 +124,8 @@
                   <view class='position'>仅美特斯邦威南京东路门店使用</view>
                 </view>
                 <view class='state flex-box'>
-                  
-                  <view class='coupon-btn' >点击领取</view>
+                  <view wx:if='{{item.got}}'><image  class='state-img' mode='widthFix' src='../../images/lingqu.png'></image></view>
+                  <view wx:if='{{!item.got}}' class='coupon-btn' data-index='{{index}}' bindtap='getCoupon'>点击领取</view>
                 </view>
               </view>
             </view>
@@ -161,6 +161,19 @@
               </block>
             </view>
             
+        </view>
+
+        <view class='flex-box stock-hint ykc'>
+          <block>
+            <image src='../../images/wkc.jpg' mode='widthFix'></image>
+            <!-- <image src='../../images/slkc.jpg' mode='widthFix'></image>
+            <image src=s'../../images/ykc.jpg' mode='widthFix'></image> -->
+            <view class='stock-hint-text '>
+              <view>货不多啦，</view>
+              <view>请抓紧时间联系导购！</view>  
+            </view>
+          </block>
+          
         </view>
       </block>
       

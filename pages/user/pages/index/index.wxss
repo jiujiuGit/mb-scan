@@ -1,0 +1,69 @@
+/* pages/user/pages/index/index.wxss */
+#userInfo{
+  padding: 40rpx 0;
+  background: -webkit-linear-gradient(#413162, #3D3D6D); /* Safari 5.1 - 6.0 */
+  background: -o-linear-gradient(#413162, #3D3D6D); /* Opera 11.1 - 12.0 */
+  background: -moz-linear-gradient(#413162, #3D3D6D); /* Firefox 3.6 - 15 */
+  background: linear-gradient(#413162, #3D3D6D); /* 标准的语法 */
+  text-align: center;
+}
+#user-img{
+  width: 150rpx;
+  height: 150rpx;
+  text-align: center;
+  border-radius: 50%;
+  background: white
+}
+#user-name{
+  color: white;
+  font-size: 38rpx;
+  margin-top: 30rpx;
+}
+.grade{
+
+}
+.user-dj{
+  justify-content: center;
+  margin-top: 50rpx;
+  color:#fada63;
+  font-size: 28rpx
+  
+}
+.jifen{
+  margin-left: 100rpx
+}
+.order-bar{
+  padding:20rpx 0;
+  border-bottom: 10rpx solid #f5f5f5;
+}
+.order{
+  color: #353535;
+  font-size: 24rpx;
+  text-align: center; 
+  
+}
+.order .iconfont{
+  color:#fada63 ;
+  font-size: 50rpx;
+  font-weight: bolder;
+}
+.order-all{
+  border-right: 1px solid #dcdcdc;
+}
+.cell{
+  padding-left: 28rpx;
+  line-height: 100rpx;
+  font-size: 24rpx;
+  color: #353535;
+  border-bottom: 1px solid #dcdcdc;
+}
+.cell-icon{
+  text-align: right;
+}
+.cell .icon-you{
+  padding: 0 20rpx;
+  
+}
+.scanSwitch{
+  border-bottom: 10rpx solid #f5f5f5;
+}

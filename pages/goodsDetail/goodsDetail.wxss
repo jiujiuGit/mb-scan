@@ -30,6 +30,9 @@
   border-bottom: 10rpx solid #F5F5F5;
   align-items: center;
 }
+.npr{
+  padding-right: 0;
+}
 .section1{
   align-items:center
 }
@@ -67,7 +70,8 @@
   margin-left: 22rpx;
 }
 .icon-you{
-  padding-left: 40rpx;
+  padding-left:22rpx;
+  padding-right:22rpx ;
 }
 .inventory{
   padding: 0 22rpx;
@@ -211,14 +215,18 @@
 
 }
 
-#layer-content{
+.layer-content{
   padding: 30rpx 40rpx;
-  background-color: #f5f5f5;
+  background-color: white;
   position: relative;
+}
+.couponLayer{
+  background-color: #f5f5f5;
 }
 .icon-cha{
   position: absolute;
-  right: 30rpx;
+  right: 0;
+  padding: 0 30rpx;
   top: 30rpx;
 }
 .layer-title{
@@ -268,4 +276,27 @@
 }
 .attr-item-active{
   border:1px solid #dd0000;
+}
+.stock-hint{
+  align-items: center;
+  justify-content: center;
+  margin-top: 100rpx;
+  margin-bottom: 50rpx;
+  font-size: 30rpx;
+}
+.stock-hint>image{
+  width: 96rpx;
+  height: 96rpx;
+}
+.stock-hint-text{
+  margin-left: 20rpx;
+}
+.skc{
+  color: #dd0000;
+}
+.ykc{
+  color: #24ae37
+}
+.wkc{
+  color: #9a9a9a;
 }

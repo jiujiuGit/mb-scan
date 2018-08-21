@@ -14,7 +14,25 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
+    wx.getSetting({
+      success: function (res) {
+        console.log(res.authSetting['scope.userInfo'])
+        if (res.authSetting['scope.userInfo']) {
+          console.log(1)
+          wx.getUserInfo({
+            success: function (res) {
+              console.log(res.userInfo)
+              app.globalData.userInfo = res.userInfo;
+              console.log(app.globalData.userInfo)
+            }
+          })
+        }else{
+          wx.reLaunch({
+            url: '../authorization/authorization',
+          })
+        }
+      }
+    }) 
     
   },
   loadLocation :function(){

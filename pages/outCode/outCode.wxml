@@ -25,7 +25,7 @@
 
         <view class='flex-item-1 img-container' >
           <view class='flex-box scroll'>
-            <view wx:for='{{5}}'><image  class='prod-img' mode='widthFix' src='../../images/img.jpg'></image></view>
+            <view wx:for='{{index+1}}'><image  class='prod-img' mode='widthFix' src='../../images/img.jpg'></image></view>
           </view>
         </view>
         <view><image  class='erweima-icon' mode='widthFix' src='../../images/code.png'></image></view>
